@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Events Booking Platform — Project Details</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <a href="/" class="back-link">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span *ngIf="fr">Retour aux projets</span>
+        <span *ngIf="!fr">Back to Projects</span>
+      </a>
+    </div>
+
+    <div class="toggle-container">
+      <div class="language-toggle-minimal">
+        <input type="radio" id="french-min" name="language-min" value="fr" [checked]="fr">
+        <input type="radio" id="english-min" name="language-min" value="en" [checked]="!fr">
+        <label for="french-min" (click)="change()" class="language-option" [ngClass]="{'active': fr}">Français</label>
+        <label for="english-min" (click)="change()" class="language-option" [ngClass]="{'active': !fr}">English</label>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="main-container">
+    <div class="content-wrapper">
+      <!-- Left Column - Scrollable Content -->
+      <div class="left-content">
+        <!-- Title and Overview -->
+        <div class="title-section">
+          <span class="category-badge" *ngIf="fr">Projet Vedette</span>
+          <span class="category-badge" *ngIf="!fr">Featured Project</span>
+          
+          <h1 class="project-title" *ngIf="fr">Plateforme de Réservation d'Événements</h1>
+          <h1 class="project-title" *ngIf="!fr">Events Booking Platform</h1>
+          
+          <p class="project-overview" *ngIf="fr">
+            Une application web monopage pour découvrir des concerts et réserver des billets avec une expérience fluide, axée sur le mobile.
+            Les utilisateurs peuvent parcourir les événements, consulter les détails, ajouter des billets à un "Vibebook" personnel (panier), ajuster les quantités et
+            confirmer les achats. L'application inclut des routes protégées par authentification, des totaux en temps réel, des notifications de succès,
+            et un effet de confettis festif lors de l'achat. Elle est optimisée pour les performances et déployée sur GitHub Pages
+            avec une gestion appropriée du SPA 404.
+          </p>
+          <p class="project-overview" *ngIf="!fr">
+            A single-page web application to discover concerts and book tickets with a smooth, mobile-first experience.
+            Users can browse events, view details, add tickets to a personal "Vibebook" (cart), adjust quantities, and
+            confirm purchases. The app includes authentication-protected routes, real-time totals, success notifications,
+            and a celebratory confetti effect on purchase. It's optimized for performance and deployed on GitHub Pages
+            with proper SPA 404 handling.
+          </p>
+        </div>
+
+        <!-- Features -->
+        <div class="features-section">
+          <h2 class="section-title" *ngIf="fr">Fonctionnalités Clés</h2>
+          <h2 class="section-title" *ngIf="!fr">Key Features</h2>
+          <div class="section-divider"></div>
+          <div class="features-grid">
+            <div class="feature-card">
+              <h4 class="feature-title" *ngIf="fr">Découverte d'Événements</h4>
+              <h4 class="feature-title" *ngIf="!fr">Event Discovery</h4>
+              <p class="feature-description" *ngIf="fr">
+                Grille défilante et responsive de concerts avec badges (En Vente, Populaire, Sold Out) et accès rapide aux détails.
+              </p>
+              <p class="feature-description" *ngIf="!fr">
+                Scrollable, responsive grid of concerts with badges (En Vente, Populaire, Sold Out) and quick access to details.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h4 class="feature-title" *ngIf="fr">Détails des Événements</h4>
+              <h4 class="feature-title" *ngIf="!fr">Event Details</h4>
+              <p class="feature-description" *ngIf="fr">
+                Page d'événement enrichie avec date, heure, lieu et prix du billet. Les utilisateurs peuvent sélectionner les quantités et ajouter au Vibebook.
+              </p>
+              <p class="feature-description" *ngIf="!fr">
+                Rich event page with date, time, venue, and ticket price. Users can select quantities and add to Vibebook.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h4 class="feature-title">Vibebook (Panier)</h4>
+              <p class="feature-description" *ngIf="fr">
+                Totaux par ligne et un pied de page <strong>Total Général</strong> avec un workflow de confirmation d'achat et alerte de succès.
+              </p>
+              <p class="feature-description" *ngIf="!fr">
+                Line-item totals and a <strong>Grand Total</strong> footer with a purchase confirmation workflow and success alert.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h4 class="feature-title" *ngIf="fr">Authentification & Guards</h4>
+              <h4 class="feature-title" *ngIf="!fr">Authentication & Guards</h4>
+              <p class="feature-description" *ngIf="fr">
+                Formulaire de connexion avec validateurs Angular et guards de route protégeant l'accès au Vibebook.
+              </p>
+              <p class="feature-description" *ngIf="!fr">
+                Login form with Angular validators and route guards protecting Vibebook access.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h4 class="feature-title" *ngIf="fr">Notifications & Confettis</h4>
+              <h4 class="feature-title" *ngIf="!fr">Notifications & Confetti</h4>
+              <p class="feature-description" *ngIf="fr">
+                Toast/alerte de succès et une explosion de <em>canvas-confetti</em> lors de la confirmation d'achat réussie.
+              </p>
+              <p class="feature-description" *ngIf="!fr">
+                Success toast/alert and a <em>canvas-confetti</em> burst on successful purchase confirmation.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h4 class="feature-title" *ngIf="fr">Interface Responsive</h4>
+              <h4 class="feature-title" *ngIf="!fr">Responsive UI</h4>
+              <p class="feature-description" *ngIf="fr">
+                Disposition mobile-first, utilitaires Bootstrap et réactivité des tableaux pour petits écrans.
+              </p>
+              <p class="feature-description" *ngIf="!fr">
+                Mobile-first layout, Bootstrap utilities, and table responsiveness for small screens.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h4 class="feature-title" *ngIf="fr">Gestion SPA 404</h4>
+              <h4 class="feature-title" *ngIf="!fr">SPA 404 Handling</h4>
+              <p class="feature-description" *ngIf="fr">
+                404.html personnalisé et script de redirection index pour les liens profonds sur GitHub Pages.
+              </p>
+              <p class="feature-description" *ngIf="!fr">
+                Custom 404.html and index redirect script for deep links on GitHub Pages.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h4 class="feature-title" *ngIf="fr">Build Optimisé</h4>
+              <h4 class="feature-title" *ngIf="!fr">Optimized Build</h4>
+              <p class="feature-description" *ngIf="fr">
+                Taille de bundle réduite en utilisant Bootstrap CDN, polyfills centralisés et exclusion des specs de test dans le build de prod.
+              </p>
+              <p class="feature-description" *ngIf="!fr">
+                Reduced bundle size by using CDN Bootstrap, centralized polyfills, and excluded test specs in prod build.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Challenges -->
+        <div class="challenges-section">
+          <h2 class="section-title" *ngIf="fr">Défis & Solutions</h2>
+          <h2 class="section-title" *ngIf="!fr">Challenges & Solutions</h2>
+          <div class="section-divider"></div>
+          <ul class="challenges-list" *ngIf="fr">
+            <li>
+              <strong>Budget de bundle dépassé</strong> — Bootstrap déplacé vers CDN et ressources resserrées pour réduire le bundle initial sous les seuils.
+            </li>
+            <li>
+              <strong>Dépréciation Sass</strong> — Suppression des imports dépréciés et utilisation du CSS compilé via angular.json.
+            </li>
+            <li>
+              <strong>Erreur 404 sur liens profonds GitHub Pages</strong> — Implémentation de la redirection SPA 404 (404.html + script index) pour les routes Angular.
+            </li>
+            <li>
+              <strong>Base href incorrecte sur Windows Git Bash</strong> — Assuré que base href est défini sur <code>/events/</code> et évité la corruption de chemin via les flags CLI.
+            </li>
+            <li>
+              <strong>Fichiers spec compilés en prod</strong> — Exclusion de <code>*.spec.ts</code> dans <code>tsconfig.app.json</code> pour éviter que les globaux de test ne cassent les builds.
+            </li>
+          </ul>
+          <ul class="challenges-list" *ngIf="!fr">
+            <li>
+              <strong>Bundle budget exceeded</strong> — Moved Bootstrap to CDN and tightened assets to drop the initial bundle below thresholds.
+            </li>
+            <li>
+              <strong>Sass deprecation</strong> — Removed deprecated imports and relied on compiled CSS via angular.json.
+            </li>
+            <li>
+              <strong>GitHub Pages deep-link 404</strong> — Implemented SPA 404 redirect (404.html + index script) for Angular routes.
+            </li>
+            <li>
+              <strong>Incorrect base href on Windows Git Bash</strong> — Ensured base href is set to <code>/events/</code> and avoided path mangling via CLI flags.
+            </li>
+            <li>
+              <strong>Spec files compiling in prod</strong> — Excluded <code>*.spec.ts</code> in <code>tsconfig.app.json</code> to prevent test globals from breaking builds.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right Side - Sticky Slideshow -->
+      <div class="right-sticky">
+        <div class="slideshow-card">
+          <!-- Slideshow -->
+          <div class="slideshow-container">
+            <img
+              src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1080&auto=format&fit=crop"
+              alt="Events gallery 1" class="slideshow-image active">
+            <img
+              src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1080&auto=format&fit=crop"
+              alt="Events gallery 2" class="slideshow-image">
+            <img
+              src="https://images.unsplash.com/photo-1518972559570-7cc1309f3229?q=80&w=1080&auto=format&fit=crop"
+              alt="Events gallery 3" class="slideshow-image">
+            <img
+              src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?q=80&w=1080&auto=format&fit=crop"
+              alt="Events gallery 4" class="slideshow-image">
+
+            <!-- Navigation Buttons -->
+            <button class="nav-button prev" onclick="changeSlide(-1)">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#14213d" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button class="nav-button next" onclick="changeSlide(1)">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#14213d" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+
+            <!-- Slide Indicators -->
+            <div class="slide-indicators">
+              <button class="indicator active" onclick="goToSlide(0)"></button>
+              <button class="indicator" onclick="goToSlide(1)"></button>
+              <button class="indicator" onclick="goToSlide(2)"></button>
+              <button class="indicator" onclick="goToSlide(3)"></button>
+            </div>
+          </div>
+
+          <!-- Technologies -->
+          <div class="technologies-section">
+            <h3 class="tech-title" *ngIf="fr">Technologies Utilisées</h3>
+            <h3 class="tech-title" *ngIf="!fr">Technologies Used</h3>
+            <div class="tech-tags">
+              <span class="tech-tag">Angular 19</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">RxJS</span>
+              <span class="tech-tag">Angular Router</span>
+              <span class="tech-tag">SCSS</span>
+              <span class="tech-tag">Bootstrap 5</span>
+              <span class="tech-tag">Bootstrap Icons</span>
+              <span class="tech-tag">ngx-toastr</span>
+              <span class="tech-tag">canvas-confetti</span>
+              <span class="tech-tag">angular-cli-ghpages</span>
+              <span class="tech-tag">GitHub Pages</span>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="action-buttons">
+            <a class="btn-primary" href="https://s2c1i.github.io/events/" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              <span *ngIf="fr">Voir la Démo</span>
+              <span *ngIf="!fr">View Live Demo</span>
+            </a>
+            <a class="btn-secondary" href="https://github.com/S2C1I/events" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7
+                         A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0
+                         C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61
+                         6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                </path>
+              </svg>
+              <span *ngIf="fr">Voir le Code Source</span>
+              <span *ngIf="!fr">View Source Code</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer CTA -->
+  <footer class="footer">
+    <div class="footer-container">
+      <h2 class="footer-title" *ngIf="fr">Intéressé par ce projet ?</h2>
+      <h2 class="footer-title" *ngIf="!fr">Interested in this project?</h2>
+      
+      <p class="footer-text" *ngIf="fr">Parlons de la création d'applications d'événements, de flux de réservation et de SPA Angular performantes.</p>
+      <p class="footer-text" *ngIf="!fr">Let's talk about building event apps, booking flows, and performant Angular SPAs.</p>
+      
+      <button class="footer-button" *ngIf="fr">Contactez-moi</button>
+      <button class="footer-button" *ngIf="!fr">Contact Me</button>
+    </div>
+  </footer>
+
+</body>
+</html>

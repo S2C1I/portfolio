@@ -1,0 +1,148 @@
+<section class="projects-section">
+    <div class="projects-container">
+        <div class="projects-header">
+            <h2 *ngIf="fr" class="projects-title">Réalisations clés</h2>
+            <h2 *ngIf="!fr"class="projects-title">Featured Projects</h2>
+            <div class="projects-divider"></div>
+        </div>
+        
+        
+        <div class="featured-project">
+            <div class="featured-grid"  >
+                <div *ngIf="fr" class="featured-content">
+                    <h3 class="featured-title">Plateforme de billetterie de concerts</h3>
+                    <p class="featured-description">
+                        Une solution moderne permettant de consulter les concerts disponibles, de réserver ses billets facilement et de les ajouter automatiquement à son agenda.
+                    </p>
+                    
+                    <div class="featured-tech">
+                        <span class="tech-tag">Angular</span>
+                        <span class="tech-tag">TypeScript</span>
+                    </div>
+                    
+                    <div class="featured-buttons">
+                        <a  class="btn-primary">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                            </svg>
+                            Live Demo
+                        </a>
+                        <a  class="btn-secondary" (click)="navigateToProject('3')">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                            </svg>
+                            Details
+                        </a>
+                    </div>
+                </div>
+                <div *ngIf="!fr" class="featured-content">
+                    <h3 class="featured-title">Concert Ticketing Platform</h3>
+                    <p class="featured-description">
+                       A modern concert ticket platform featuring event listings, seamless ticket booking, and calendar integration to keep your schedule organized.
+                    </p>
+                    
+                    <div class="featured-tech">
+                        <span class="tech-tag">Angular</span>
+                        <span class="tech-tag">TypeScript</span>
+                    </div>
+                    
+                    <div class="featured-buttons">
+                        <a  class="btn-primary" >
+                            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                            </svg>
+                            Live Demo
+                        </a>
+                        <a  class="btn-secondary" (click)="navigateToProject('3')">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                            </svg>
+                            Details
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="featured-image">
+                    <img src="https://placehold.co/600x400/orange/white" alt="E-Commerce Platform">
+                </div>
+            </div>
+        </div>
+
+        <div class="projects-grid">
+            <a class="project-card" >
+                <div class="project-image-container">
+                    <img src="https://placehold.co/600x400/orange/white" alt="Project" class="project-image">
+                    <div class="project-overlay"></div>
+                </div>
+                <div *ngIf="fr" class="project-content">
+                    <h3 class="project-title">Plateforme de suivi de candidatures</h3>
+                    <p class="project-description">Une solution moderne pour gérer ses candidatures, avec un suivi, une organisation claire des informations et une gestion fluide du processus de recrutement.</p>
+                    <div class="project-tech-tags">
+                        <span class="project-tech-tag">Angular</span>
+                        <span class="project-tech-tag">TypeScript</span>
+                    </div>
+                    <a  class="project-link">
+                        Découvrir mon travail
+                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </a>
+                </div>
+                <div *ngIf="!fr" class="project-content">
+                    <h3 class="project-title">Application Tracking Platform</h3>
+                    <p class="project-description">
+                        A modern platform for managing job applications, with status updates, organized candidate data, and streamlined workflow management.
+                    </p>
+                    <div class="project-tech-tags">
+                        <span class="project-tech-tag">Angular</span>
+                        <span class="project-tech-tag">TypeScript</span>
+                    </div>
+                    <a  class="project-link">
+                        View Project
+                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </a>
+                </div>
+            </a>
+            <a class="project-card" >
+                <div class="project-image-container">
+                    <img src="https://placehold.co/600x400/orange/white" alt="Project" class="project-image">
+                    <div class="project-overlay"></div>
+                </div>
+                <div *ngIf="fr" class="project-content">
+                    <h3 class="project-title">Plateforme de suivi de candidatures</h3>
+                    <p class="project-description">Une solution moderne pour gérer ses candidatures, avec un suivi, une organisation claire des informations et une gestion fluide du processus de recrutement.</p>
+                    <div class="project-tech-tags">
+                        <span class="project-tech-tag">Angular</span>
+                        <span class="project-tech-tag">TypeScript</span>
+                    </div>
+                    <a  class="project-link">
+                        Découvrir mon travail
+                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </a>
+                </div>
+                <div *ngIf="!fr" class="project-content">
+                    <h3 class="project-title">Application Tracking Platform</h3>
+                    <p class="project-description">
+                        A modern platform for managing job applications, with status updates, organized candidate data, and streamlined workflow management.
+                    </p>
+                    <div class="project-tech-tags">
+                        <span class="project-tech-tag">Angular</span>
+                        <span class="project-tech-tag">TypeScript</span>
+                    </div>
+                    <a  class="project-link">
+                        View Project
+                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </a>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
