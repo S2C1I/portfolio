@@ -1,0 +1,508 @@
+{
+  "projects": [
+        {
+      "id": "1",
+      "slug": "express-front",
+      "featured": true,
+      "category": {
+        "fr": "Projet Vedette",
+        "en": "Featured Project"
+      },
+      "title": {
+        "fr": "Gestion d'Étudiants en Temps Réel",
+        "en": "Real-Time Students Dashboard"
+      },
+      "overview": {
+        "fr": "SPA Angular connectée à un backend Render pour gérer les étudiants (CRUD), l'authentification JWT et une messagerie en temps réel. Présence en ligne, badges d'absence/non lus, écouteurs persistants via RxJS BehaviorSubject, reconnexion Socket.io et déploiement sur GitHub Pages avec gestion 404 pour SPA.",
+        "en": "Angular SPA connected to a Render backend for students CRUD, JWT authentication, and real-time messaging. Online presence, unread badges, persistent listeners via RxJS BehaviorSubject, Socket.io reconnection, and GitHub Pages deployment with SPA 404 handling."
+      },
+      "features": [
+        {
+          "title": { "fr": "Authentification JWT & Guards", "en": "JWT Authentication & Guards" },
+          "description": {
+            "fr": "Connexion sécurisée, stockage du token, intercepteur HTTP pour l'en-tête Authorization et routes protégées.",
+            "en": "Secure login, token storage, HTTP interceptor for Authorization header, and protected routes."
+          }
+        },
+        {
+          "title": { "fr": "Gestion des Étudiants (CRUD)", "en": "Students Management (CRUD)" },
+          "description": {
+            "fr": "Liste, détails et formulaire d'étudiant avec opérations créer, lire, mettre à jour et supprimer.",
+            "en": "Student list, details, and form with create, read, update, and delete operations."
+          }
+        },
+        {
+          "title": { "fr": "Messagerie en Temps Réel", "en": "Real-Time Messaging" },
+          "description": {
+            "fr": "Chat bidirectionnel avec Socket.io, déduplication des messages envoyés et défilement automatique.",
+            "en": "Bidirectional chat with Socket.io, sent-message de-duplication, and auto-scroll."
+          }
+        },
+        {
+          "title": { "fr": "Présence & Badges Non Lus", "en": "Presence & Unread Badges" },
+          "description": {
+            "fr": "Indicateurs en ligne/hors ligne, liste d'utilisateurs en ligne et badge compact pour messages non lus (remplace les toasts).",
+            "en": "Online/offline indicators, online users list, and a compact unread messages badge (replacing toasts)."
+          }
+        },
+        {
+          "title": { "fr": "Écouteurs Persistants RxJS", "en": "Persistent RxJS Listeners" },
+          "description": {
+            "fr": "Événements Socket centralisés dans un service avec BehaviorSubject pour conserver l'état à travers la navigation.",
+            "en": "Centralized Socket events in a service with BehaviorSubject to retain state across navigation."
+          }
+        },
+        {
+          "title": { "fr": "Reconnexion & Résilience", "en": "Reconnection & Resilience" },
+          "description": {
+            "fr": "Gestion des statuts de connexion, reconnexion automatique et rafraîchissement des utilisateurs en ligne.",
+            "en": "Connection status handling, automatic reconnection, and online users refresh."
+          }
+        },
+        {
+          "title": { "fr": "Déploiement GitHub Pages", "en": "GitHub Pages Deployment" },
+          "description": {
+            "fr": "Publication via angular-cli-ghpages, baseHref correct (/express-front/) et redirection SPA 404.",
+            "en": "Published with angular-cli-ghpages, correct baseHref (/express-front/), and SPA 404 redirect."
+          }
+        }
+      ],
+      "challenges": [
+        {
+          "title": { "fr": "Notifications intrusives", "en": "Intrusive notifications" },
+          "solution": {
+            "fr": "Remplacement des toasts par un badge discret d'éléments non lus pour une UX plus propre.",
+            "en": "Replaced toasts with a subtle unread badge for a cleaner UX."
+          }
+        },
+        {
+          "title": { "fr": "Temps réel perdu après navigation", "en": "Realtime lost after navigation" },
+          "solution": {
+            "fr": "Migration vers des écouteurs persistants et BehaviorSubject pour ne pas perdre les événements sur changement de route.",
+            "en": "Migrated to persistent listeners and BehaviorSubject to avoid losing events on route changes."
+          }
+        },
+        {
+          "title": { "fr": "Présence affichée hors ligne à tort", "en": "Presence shown offline incorrectly" },
+          "solution": {
+            "fr": "Statut de connexion réactif via un flux centralisé et rafraîchissement de la liste des utilisateurs en ligne.",
+            "en": "Reactive connection status via a centralized stream and online users refresh."
+          }
+        },
+        {
+          "title": { "fr": "Déploiement SPA & 404", "en": "SPA deployment & 404" },
+          "solution": {
+            "fr": "Configuration de la redirection 404 et vérification du baseHref pour un routage côté client fiable sur GitHub Pages.",
+            "en": "Configured 404 redirect and verified baseHref for reliable client-side routing on GitHub Pages."
+          }
+        }
+      ],
+      "technologies": [
+        "Angular 19",
+        "TypeScript",
+        "RxJS",
+        "Socket.io-client",
+        "JWT",
+        "HTTP Interceptor",
+        "BehaviorSubject Pattern",
+        "SCSS",
+        "angular-cli-ghpages",
+        "GitHub Pages"
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1080&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1080&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1080&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1080&auto=format&fit=crop"
+      ],
+      "links": {
+        "demo": "https://s2c1i.github.io/express-front/",
+        "github": "https://github.com/S2C1I/express-front"
+      },
+      "footer": {
+        "title": { "fr": "Intéressé par ce projet ?", "en": "Interested in this project?" },
+        "text": {
+          "fr": "Parlons d'applications temps réel, de chat et de dashboards Angular connectés.",
+          "en": "Let's talk about real-time apps, chat, and connected Angular dashboards."
+        },
+        "buttonText": { "fr": "Contactez-moi", "en": "Contact Me" }
+      }
+    },
+    {
+      "id": "2",
+      "slug": "events-booking-platform",
+      "featured": true,
+      "category": {
+        "fr": "Projet Vedette",
+        "en": "Featured Project"
+      },
+      "title": {
+        "fr": "Plateforme de Réservation d'Événements",
+        "en": "Events Booking Platform"
+      },
+      "overview": {
+        "fr": "SPA Angular pour découvrir des concerts et réserver des billets. Parcourez les événements, consultez les détails, ajoutez des billets au Vibebook (panier) avec totaux en temps réel, validation sécurisée, notifications et confettis. Déployé sur GitHub Pages avec gestion 404 pour SPA.",
+        "en": "Angular SPA to discover concerts and book tickets. Browse events, view details, add tickets to a Vibebook (cart) with real-time totals, secure checkout, notifications, and confetti. Deployed to GitHub Pages with SPA 404 handling."
+      },
+      "features": [
+        {
+          "title": {
+            "fr": "Découverte d'Événements",
+            "en": "Event Discovery"
+          },
+          "description": {
+            "fr": "Grille défilante et responsive de concerts avec badges (En Vente, Populaire, Sold Out) et accès rapide aux détails.",
+            "en": "Scrollable, responsive grid of concerts with badges (En Vente, Populaire, Sold Out) and quick access to details."
+          }
+        },
+        {
+          "title": {
+            "fr": "Détails des Événements",
+            "en": "Event Details"
+          },
+          "description": {
+            "fr": "Page d'événement enrichie avec date, heure, lieu et prix du billet. Les utilisateurs peuvent sélectionner les quantités et ajouter au Vibebook.",
+            "en": "Rich event page with date, time, venue, and ticket price. Users can select quantities and add to Vibebook."
+          }
+        },
+        {
+          "title": {
+            "fr": "Vibebook (Panier)",
+            "en": "Vibebook (Cart)"
+          },
+          "description": {
+            "fr": "Totaux par ligne et un pied de page <strong>Total Général</strong> avec un workflow de confirmation d'achat et alerte de succès.",
+            "en": "Line-item totals and a <strong>Grand Total</strong> footer with a purchase confirmation workflow and success alert."
+          }
+        },
+        {
+          "title": {
+            "fr": "Authentification & Guards",
+            "en": "Authentication & Guards"
+          },
+          "description": {
+            "fr": "Formulaire de connexion avec validateurs Angular et guards de route protégeant l'accès au Vibebook.",
+            "en": "Login form with Angular validators and route guards protecting Vibebook access."
+          }
+        },
+        {
+          "title": {
+            "fr": "Notifications & Confettis",
+            "en": "Notifications & Confetti"
+          },
+          "description": {
+            "fr": "Toast/alerte de succès et une explosion de <em>canvas-confetti</em> lors de la confirmation d'achat réussie.",
+            "en": "Success toast/alert and a <em>canvas-confetti</em> burst on successful purchase confirmation."
+          }
+        },
+        {
+          "title": {
+            "fr": "Interface Responsive",
+            "en": "Responsive UI"
+          },
+          "description": {
+            "fr": "Disposition mobile-first, utilitaires Bootstrap et réactivité des tableaux pour petits écrans.",
+            "en": "Mobile-first layout, Bootstrap utilities, and table responsiveness for small screens."
+          }
+        },
+        {
+          "title": {
+            "fr": "Gestion SPA 404",
+            "en": "SPA 404 Handling"
+          },
+          "description": {
+            "fr": "404.html personnalisé et script de redirection index pour les liens profonds sur GitHub Pages.",
+            "en": "Custom 404.html and index redirect script for deep links on GitHub Pages."
+          }
+        },
+        {
+          "title": {
+            "fr": "Build Optimisé",
+            "en": "Optimized Build"
+          },
+          "description": {
+            "fr": "Taille de bundle réduite en utilisant Bootstrap CDN, polyfills centralisés et exclusion des specs de test dans le build de prod.",
+            "en": "Reduced bundle size by using CDN Bootstrap, centralized polyfills, and excluded test specs in prod build."
+          }
+        }
+      ],
+      "challenges": [
+        {
+          "title": {
+            "fr": "Budget de bundle dépassé",
+            "en": "Bundle budget exceeded"
+          },
+          "solution": {
+            "fr": "Bootstrap déplacé vers CDN et ressources resserrées pour réduire le bundle initial sous les seuils.",
+            "en": "Moved Bootstrap to CDN and tightened assets to drop the initial bundle below thresholds."
+          }
+        },
+        {
+          "title": {
+            "fr": "Dépréciation Sass",
+            "en": "Sass deprecation"
+          },
+          "solution": {
+            "fr": "Suppression des imports dépréciés et utilisation du CSS compilé via angular.json.",
+            "en": "Removed deprecated imports and relied on compiled CSS via angular.json."
+          }
+        },
+        {
+          "title": {
+            "fr": "Erreur 404 sur liens profonds GitHub Pages",
+            "en": "GitHub Pages deep-link 404"
+          },
+          "solution": {
+            "fr": "Implémentation de la redirection SPA 404 (404.html + script index) pour les routes Angular.",
+            "en": "Implemented SPA 404 redirect (404.html + index script) for Angular routes."
+          }
+        },
+        {
+          "title": {
+            "fr": "Base href incorrecte sur Windows Git Bash",
+            "en": "Incorrect base href on Windows Git Bash"
+          },
+          "solution": {
+            "fr": "Assuré que base href est défini sur <code>/events/</code> et évité la corruption de chemin via les flags CLI.",
+            "en": "Ensured base href is set to <code>/events/</code> and avoided path mangling via CLI flags."
+          }
+        },
+        {
+          "title": {
+            "fr": "Fichiers spec compilés en prod",
+            "en": "Spec files compiling in prod"
+          },
+          "solution": {
+            "fr": "Exclusion de <code>*.spec.ts</code> dans <code>tsconfig.app.json</code> pour éviter que les globaux de test ne cassent les builds.",
+            "en": "Excluded <code>*.spec.ts</code> in <code>tsconfig.app.json</code> to prevent test globals from breaking builds."
+          }
+        }
+      ],
+      "technologies": [
+        "Angular 19",
+        "TypeScript",
+        "RxJS",
+        "Angular Router",
+        "SCSS",
+        "Bootstrap 5",
+        "Bootstrap Icons",
+        "ngx-toastr",
+        "canvas-confetti",
+        "angular-cli-ghpages",
+        "GitHub Pages"
+      ],
+      "images": [
+        "assets/events/1.png",
+        "assets/events/2.png",
+        "assets/events/3.png",
+        "assets/events/4.png"
+      ],
+      "links": {
+        "demo": "https://s2c1i.github.io/events/",
+        "github": "https://github.com/S2C1I/events"
+      },
+      "footer": {
+        "title": {
+          "fr": "Intéressé par ce projet ?",
+          "en": "Interested in this project?"
+        },
+        "text": {
+          "fr": "Parlons de la création d'applications d'événements, de flux de réservation et de SPA Angular performantes.",
+          "en": "Let's talk about building event apps, booking flows, and performant Angular SPAs."
+        },
+        "buttonText": {
+          "fr": "Contactez-moi",
+          "en": "Contact Me"
+        }
+      }
+    },
+    {
+      "id": "3",
+      "slug": "budget-tracker",
+      "featured": true,
+      "category": {
+        "fr": "Projet Vedette",
+        "en": "Featured Project"
+      },
+      "title": {
+        "fr": "Suivi de Budget",
+        "en": "Budget Tracker"
+      },
+      "overview": {
+        "fr": "Une application web de gestion financière personnelle permettant aux utilisateurs de suivre leurs revenus et dépenses avec des vues mensuelles et annuelles. L'application offre une interface bilingue (français/anglais), une catégorisation intelligente des transactions avec traduction automatique, et des résumés financiers en temps réel. Les utilisateurs peuvent ajouter, supprimer et filtrer des transactions, visualiser des répartitions mensuelles détaillées dans la vue annuelle, et naviguer de manière fluide entre les périodes. Optimisée pour mobile avec une mise en page réactive en cartes et déployée sur GitHub Pages.",
+        "en": "A personal finance management web application allowing users to track income and expenses with monthly and yearly views. The app offers a bilingual interface (French/English), intelligent transaction categorization with automatic translation, and real-time financial summaries. Users can add, delete, and filter transactions, view detailed monthly breakdowns in the yearly view, and seamlessly navigate between periods. Mobile-optimized with responsive card-based layout and deployed on GitHub Pages."
+      },
+      "features": [
+        {
+          "title": {
+            "fr": "Interface Bilingue",
+            "en": "Bilingual Interface"
+          },
+          "description": {
+            "fr": "Basculement en temps réel entre français et anglais avec ngx-translate, incluant toutes les étiquettes d'interface, noms de mois et catégories.",
+            "en": "Real-time switching between French and English with ngx-translate, including all UI labels, month names, and categories."
+          }
+        },
+        {
+          "title": {
+            "fr": "Vues Mensuelles & Annuelles",
+            "en": "Monthly & Yearly Views"
+          },
+          "description": {
+            "fr": "Vue mensuelle affichant toutes les transactions pour un mois sélectionné, et vue annuelle présentant une répartition de 12 mois avec revenus, dépenses et solde pour chaque mois.",
+            "en": "Monthly view displaying all transactions for a selected month, and yearly view presenting a 12-month breakdown with income, expenses, and balance for each month."
+          }
+        },
+        {
+          "title": {
+            "fr": "Gestion des Transactions",
+            "en": "Transaction Management"
+          },
+          "description": {
+            "fr": "Ajout modal de transactions avec validation de formulaire, suppression de transactions avec confirmation, et types de transaction (revenus/dépenses) avec badges colorés.",
+            "en": "Modal transaction addition with form validation, transaction deletion with confirmation, and transaction types (income/expense) with color-coded badges."
+          }
+        },
+        {
+          "title": {
+            "fr": "Traduction Intelligente des Catégories",
+            "en": "Smart Category Translation"
+          },
+          "description": {
+            "fr": "Mappage automatique des catégories connues vers les clés de traduction (freelance, épicerie, services publics, etc.) avec repli sur l'entrée brute pour les catégories personnalisées.",
+            "en": "Automatic mapping of known categories to translation keys (freelance, groceries, utilities, etc.) with fallback to raw input for custom categories."
+          }
+        },
+        {
+          "title": {
+            "fr": "Répartition Mensuelle Interactive",
+            "en": "Interactive Monthly Breakdown"
+          },
+          "description": {
+            "fr": "Dans la vue annuelle, cliquez sur n'importe quelle ligne de mois pour basculer automatiquement vers la vue mensuelle avec ce mois pré-sélectionné.",
+            "en": "In yearly view, click any month row to automatically switch to monthly view with that month pre-selected."
+          }
+        },
+        {
+          "title": {
+            "fr": "Résumés Financiers en Temps Réel",
+            "en": "Real-Time Financial Summaries"
+          },
+          "description": {
+            "fr": "Cartes de résumé dynamiques affichant les revenus totaux, les dépenses totales et le solde avec formatage localisé des nombres et emoji d'argent universel (💰).",
+            "en": "Dynamic summary cards displaying total income, total expenses, and balance with localized number formatting and universal money emoji (💰)."
+          }
+        },
+        {
+          "title": {
+            "fr": "Design Responsive Mobile",
+            "en": "Mobile Responsive Design"
+          },
+          "description": {
+            "fr": "Tableau de transactions qui se transforme en mise en page par cartes sur petits écrans (<640px) avec étiquettes de données et colonnes masquées pour une utilisation mobile optimale.",
+            "en": "Transactions table that transforms into card-based layout on small screens (<640px) with data labels and hidden columns for optimal mobile usage."
+          }
+        },
+        {
+          "title": {
+            "fr": "Architecture de Service Réactive",
+            "en": "Reactive Service Architecture"
+          },
+          "description": {
+            "fr": "TransactionService centralisé utilisant le pattern BehaviorSubject RxJS pour la gestion d'état, avec méthodes de filtrage et de calcul de totaux.",
+            "en": "Centralized TransactionService using RxJS BehaviorSubject pattern for state management, with filtering and totals calculation methods."
+          }
+        }
+      ],
+      "challenges": [
+        {
+          "title": {
+            "fr": "Chemin du chargeur de traduction avec baseHref",
+            "en": "Translation loader path with baseHref"
+          },
+          "solution": {
+            "fr": "Changement de chemin absolu <code>/i18n/</code> vers chemin relatif <code>./i18n/</code> dans TranslateHttpLoader pour fonctionner avec le déploiement GitHub Pages.",
+            "en": "Changed from absolute path <code>/i18n/</code> to relative path <code>./i18n/</code> in TranslateHttpLoader to work with GitHub Pages deployment."
+          }
+        },
+        {
+          "title": {
+            "fr": "Base href incorrecte sur Windows Git Bash",
+            "en": "Incorrect base href on Windows Git Bash"
+          },
+          "solution": {
+            "fr": "Utilisation de <code>ng build --configuration=production</code> au lieu de flag CLI pour garantir que baseHref de angular.json soit correctement appliqué (<code>/budget-tracker/</code>).",
+            "en": "Used <code>ng build --configuration=production</code> instead of CLI flag to ensure angular.json baseHref is correctly applied (<code>/budget-tracker/</code>)."
+          }
+        },
+        {
+          "title": {
+            "fr": "Filtrage mensuel vs annuel",
+            "en": "Monthly vs yearly filtering"
+          },
+          "solution": {
+            "fr": "Implémentation de logique de filtrage séparée : vue mensuelle filtre par mois+année, vue annuelle filtre uniquement par année pour afficher toutes les données mensuelles.",
+            "en": "Implemented separate filtering logic: monthly view filters by month+year, yearly view filters by year only to show all monthly data."
+          }
+        },
+        {
+          "title": {
+            "fr": "Traduction des catégories inconnues",
+            "en": "Unknown category translation"
+          },
+          "solution": {
+            "fr": "Création d'un système de mappage de catégories avec méthode <code>getCategoryLabel</code> qui vérifie d'abord les catégories connues, sinon affiche la saisie brute de l'utilisateur.",
+            "en": "Created category mapping system with <code>getCategoryLabel</code> method that checks known categories first, otherwise displays user's raw input."
+          }
+        },
+        {
+          "title": {
+            "fr": "Responsive du tableau sur mobile",
+            "en": "Table responsiveness on mobile"
+          },
+          "solution": {
+            "fr": "Utilisation de <code>[attr.data-label]</code> et CSS <code>td::before</code> pour transformer les lignes de tableau en cartes avec des étiquettes, plus colonnes masquées pour les petits écrans.",
+            "en": "Used <code>[attr.data-label]</code> and CSS <code>td::before</code> to transform table rows into cards with labels, plus hidden columns for small screens."
+          }
+        }
+      ],
+      "technologies": [
+        "Angular 19",
+        "TypeScript",
+        "RxJS",
+        "ngx-translate",
+        "@ngx-translate/http-loader",
+        "SCSS",
+        "Reactive Forms",
+        "BehaviorSubject Pattern",
+        "Standalone Components",
+        "angular-cli-ghpages",
+        "GitHub Pages"
+      ],
+      "images": [
+        "assets/budget/1.png",
+        "assets/budget/2.png",
+        "assets/budget/3.png"
+      ],
+      "links": {
+        "demo": "https://s2c1i.github.io/budget-tracker/",
+        "github": "https://github.com/S2C1I/budget-tracker"
+      },
+      "footer": {
+        "title": {
+          "fr": "Intéressé par ce projet ?",
+          "en": "Interested in this project?"
+        },
+        "text": {
+          "fr": "Parlons de la création d'applications de gestion financière, d'i18n et d'applications Angular réactives.",
+          "en": "Let's talk about building financial management apps, i18n, and reactive Angular applications."
+        },
+        "buttonText": {
+          "fr": "Contactez-moi",
+          "en": "Contact Me"
+        }
+      }
+    }
+
+  ]
+}
