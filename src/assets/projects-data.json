@@ -1,7 +1,135 @@
 {
   "projects": [
+        {
+      "id": "1",
+      "slug": "express-front",
+      "featured": true,
+      "category": {
+        "fr": "Projet Vedette",
+        "en": "Featured Project"
+      },
+      "title": {
+        "fr": "Gestion d'Étudiants en Temps Réel",
+        "en": "Real-Time Students Dashboard"
+      },
+      "overview": {
+        "fr": "SPA Angular connectée à un backend Render pour gérer les étudiants (CRUD), l'authentification JWT et une messagerie en temps réel. Présence en ligne, badges d'absence/non lus, écouteurs persistants via RxJS BehaviorSubject, reconnexion Socket.io et déploiement sur GitHub Pages avec gestion 404 pour SPA.",
+        "en": "Angular SPA connected to a Render backend for students CRUD, JWT authentication, and real-time messaging. Online presence, unread badges, persistent listeners via RxJS BehaviorSubject, Socket.io reconnection, and GitHub Pages deployment with SPA 404 handling."
+      },
+      "features": [
+        {
+          "title": { "fr": "Authentification JWT & Guards", "en": "JWT Authentication & Guards" },
+          "description": {
+            "fr": "Connexion sécurisée, stockage du token, intercepteur HTTP pour l'en-tête Authorization et routes protégées.",
+            "en": "Secure login, token storage, HTTP interceptor for Authorization header, and protected routes."
+          }
+        },
+        {
+          "title": { "fr": "Gestion des Étudiants (CRUD)", "en": "Students Management (CRUD)" },
+          "description": {
+            "fr": "Liste, détails et formulaire d'étudiant avec opérations créer, lire, mettre à jour et supprimer.",
+            "en": "Student list, details, and form with create, read, update, and delete operations."
+          }
+        },
+        {
+          "title": { "fr": "Messagerie en Temps Réel", "en": "Real-Time Messaging" },
+          "description": {
+            "fr": "Chat bidirectionnel avec Socket.io, déduplication des messages envoyés et défilement automatique.",
+            "en": "Bidirectional chat with Socket.io, sent-message de-duplication, and auto-scroll."
+          }
+        },
+        {
+          "title": { "fr": "Présence & Badges Non Lus", "en": "Presence & Unread Badges" },
+          "description": {
+            "fr": "Indicateurs en ligne/hors ligne, liste d'utilisateurs en ligne et badge compact pour messages non lus (remplace les toasts).",
+            "en": "Online/offline indicators, online users list, and a compact unread messages badge (replacing toasts)."
+          }
+        },
+        {
+          "title": { "fr": "Écouteurs Persistants RxJS", "en": "Persistent RxJS Listeners" },
+          "description": {
+            "fr": "Événements Socket centralisés dans un service avec BehaviorSubject pour conserver l'état à travers la navigation.",
+            "en": "Centralized Socket events in a service with BehaviorSubject to retain state across navigation."
+          }
+        },
+        {
+          "title": { "fr": "Reconnexion & Résilience", "en": "Reconnection & Resilience" },
+          "description": {
+            "fr": "Gestion des statuts de connexion, reconnexion automatique et rafraîchissement des utilisateurs en ligne.",
+            "en": "Connection status handling, automatic reconnection, and online users refresh."
+          }
+        },
+        {
+          "title": { "fr": "Déploiement GitHub Pages", "en": "GitHub Pages Deployment" },
+          "description": {
+            "fr": "Publication via angular-cli-ghpages, baseHref correct (/express-front/) et redirection SPA 404.",
+            "en": "Published with angular-cli-ghpages, correct baseHref (/express-front/), and SPA 404 redirect."
+          }
+        }
+      ],
+      "challenges": [
+        {
+          "title": { "fr": "Notifications intrusives", "en": "Intrusive notifications" },
+          "solution": {
+            "fr": "Remplacement des toasts par un badge discret d'éléments non lus pour une UX plus propre.",
+            "en": "Replaced toasts with a subtle unread badge for a cleaner UX."
+          }
+        },
+        {
+          "title": { "fr": "Temps réel perdu après navigation", "en": "Realtime lost after navigation" },
+          "solution": {
+            "fr": "Migration vers des écouteurs persistants et BehaviorSubject pour ne pas perdre les événements sur changement de route.",
+            "en": "Migrated to persistent listeners and BehaviorSubject to avoid losing events on route changes."
+          }
+        },
+        {
+          "title": { "fr": "Présence affichée hors ligne à tort", "en": "Presence shown offline incorrectly" },
+          "solution": {
+            "fr": "Statut de connexion réactif via un flux centralisé et rafraîchissement de la liste des utilisateurs en ligne.",
+            "en": "Reactive connection status via a centralized stream and online users refresh."
+          }
+        },
+        {
+          "title": { "fr": "Déploiement SPA & 404", "en": "SPA deployment & 404" },
+          "solution": {
+            "fr": "Configuration de la redirection 404 et vérification du baseHref pour un routage côté client fiable sur GitHub Pages.",
+            "en": "Configured 404 redirect and verified baseHref for reliable client-side routing on GitHub Pages."
+          }
+        }
+      ],
+      "technologies": [
+        "Angular 19",
+        "TypeScript",
+        "RxJS",
+        "Socket.io-client",
+        "JWT",
+        "HTTP Interceptor",
+        "BehaviorSubject Pattern",
+        "SCSS",
+        "angular-cli-ghpages",
+        "GitHub Pages"
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1080&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1080&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1080&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1080&auto=format&fit=crop"
+      ],
+      "links": {
+        "demo": "https://s2c1i.github.io/express-front/",
+        "github": "https://github.com/S2C1I/express-front"
+      },
+      "footer": {
+        "title": { "fr": "Intéressé par ce projet ?", "en": "Interested in this project?" },
+        "text": {
+          "fr": "Parlons d'applications temps réel, de chat et de dashboards Angular connectés.",
+          "en": "Let's talk about real-time apps, chat, and connected Angular dashboards."
+        },
+        "buttonText": { "fr": "Contactez-moi", "en": "Contact Me" }
+      }
+    },
     {
-      "id": "3",
+      "id": "2",
       "slug": "events-booking-platform",
       "featured": true,
       "category": {
@@ -189,7 +317,7 @@
       }
     },
     {
-      "id": "2",
+      "id": "3",
       "slug": "budget-tracker",
       "featured": true,
       "category": {
@@ -375,134 +503,7 @@
           "en": "Contact Me"
         }
       }
-    },
-    {
-      "id": "3",
-      "slug": "express-front",
-      "featured": true,
-      "category": {
-        "fr": "Projet Vedette",
-        "en": "Featured Project"
-      },
-      "title": {
-        "fr": "Gestion d'Étudiants en Temps Réel",
-        "en": "Real-Time Students Dashboard"
-      },
-      "overview": {
-        "fr": "SPA Angular connectée à un backend Render pour gérer les étudiants (CRUD), l'authentification JWT et une messagerie en temps réel. Présence en ligne, badges d'absence/non lus, écouteurs persistants via RxJS BehaviorSubject, reconnexion Socket.io et déploiement sur GitHub Pages avec gestion 404 pour SPA.",
-        "en": "Angular SPA connected to a Render backend for students CRUD, JWT authentication, and real-time messaging. Online presence, unread badges, persistent listeners via RxJS BehaviorSubject, Socket.io reconnection, and GitHub Pages deployment with SPA 404 handling."
-      },
-      "features": [
-        {
-          "title": { "fr": "Authentification JWT & Guards", "en": "JWT Authentication & Guards" },
-          "description": {
-            "fr": "Connexion sécurisée, stockage du token, intercepteur HTTP pour l'en-tête Authorization et routes protégées.",
-            "en": "Secure login, token storage, HTTP interceptor for Authorization header, and protected routes."
-          }
-        },
-        {
-          "title": { "fr": "Gestion des Étudiants (CRUD)", "en": "Students Management (CRUD)" },
-          "description": {
-            "fr": "Liste, détails et formulaire d'étudiant avec opérations créer, lire, mettre à jour et supprimer.",
-            "en": "Student list, details, and form with create, read, update, and delete operations."
-          }
-        },
-        {
-          "title": { "fr": "Messagerie en Temps Réel", "en": "Real-Time Messaging" },
-          "description": {
-            "fr": "Chat bidirectionnel avec Socket.io, déduplication des messages envoyés et défilement automatique.",
-            "en": "Bidirectional chat with Socket.io, sent-message de-duplication, and auto-scroll."
-          }
-        },
-        {
-          "title": { "fr": "Présence & Badges Non Lus", "en": "Presence & Unread Badges" },
-          "description": {
-            "fr": "Indicateurs en ligne/hors ligne, liste d'utilisateurs en ligne et badge compact pour messages non lus (remplace les toasts).",
-            "en": "Online/offline indicators, online users list, and a compact unread messages badge (replacing toasts)."
-          }
-        },
-        {
-          "title": { "fr": "Écouteurs Persistants RxJS", "en": "Persistent RxJS Listeners" },
-          "description": {
-            "fr": "Événements Socket centralisés dans un service avec BehaviorSubject pour conserver l'état à travers la navigation.",
-            "en": "Centralized Socket events in a service with BehaviorSubject to retain state across navigation."
-          }
-        },
-        {
-          "title": { "fr": "Reconnexion & Résilience", "en": "Reconnection & Resilience" },
-          "description": {
-            "fr": "Gestion des statuts de connexion, reconnexion automatique et rafraîchissement des utilisateurs en ligne.",
-            "en": "Connection status handling, automatic reconnection, and online users refresh."
-          }
-        },
-        {
-          "title": { "fr": "Déploiement GitHub Pages", "en": "GitHub Pages Deployment" },
-          "description": {
-            "fr": "Publication via angular-cli-ghpages, baseHref correct (/express-front/) et redirection SPA 404.",
-            "en": "Published with angular-cli-ghpages, correct baseHref (/express-front/), and SPA 404 redirect."
-          }
-        }
-      ],
-      "challenges": [
-        {
-          "title": { "fr": "Notifications intrusives", "en": "Intrusive notifications" },
-          "solution": {
-            "fr": "Remplacement des toasts par un badge discret d'éléments non lus pour une UX plus propre.",
-            "en": "Replaced toasts with a subtle unread badge for a cleaner UX."
-          }
-        },
-        {
-          "title": { "fr": "Temps réel perdu après navigation", "en": "Realtime lost after navigation" },
-          "solution": {
-            "fr": "Migration vers des écouteurs persistants et BehaviorSubject pour ne pas perdre les événements sur changement de route.",
-            "en": "Migrated to persistent listeners and BehaviorSubject to avoid losing events on route changes."
-          }
-        },
-        {
-          "title": { "fr": "Présence affichée hors ligne à tort", "en": "Presence shown offline incorrectly" },
-          "solution": {
-            "fr": "Statut de connexion réactif via un flux centralisé et rafraîchissement de la liste des utilisateurs en ligne.",
-            "en": "Reactive connection status via a centralized stream and online users refresh."
-          }
-        },
-        {
-          "title": { "fr": "Déploiement SPA & 404", "en": "SPA deployment & 404" },
-          "solution": {
-            "fr": "Configuration de la redirection 404 et vérification du baseHref pour un routage côté client fiable sur GitHub Pages.",
-            "en": "Configured 404 redirect and verified baseHref for reliable client-side routing on GitHub Pages."
-          }
-        }
-      ],
-      "technologies": [
-        "Angular 19",
-        "TypeScript",
-        "RxJS",
-        "Socket.io-client",
-        "JWT",
-        "HTTP Interceptor",
-        "BehaviorSubject Pattern",
-        "SCSS",
-        "angular-cli-ghpages",
-        "GitHub Pages"
-      ],
-      "images": [
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1080&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1080&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1080&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1080&auto=format&fit=crop"
-      ],
-      "links": {
-        "demo": "https://s2c1i.github.io/express-front/",
-        "github": "https://github.com/S2C1I/express-front"
-      },
-      "footer": {
-        "title": { "fr": "Intéressé par ce projet ?", "en": "Interested in this project?" },
-        "text": {
-          "fr": "Parlons d'applications temps réel, de chat et de dashboards Angular connectés.",
-          "en": "Let's talk about real-time apps, chat, and connected Angular dashboards."
-        },
-        "buttonText": { "fr": "Contactez-moi", "en": "Contact Me" }
-      }
     }
+
   ]
 }

@@ -24,7 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/portfolio",
+            "outputPath": "dist",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -43,7 +43,7 @@
               "src/styles.scss"
             ],
             "scripts": [],
-            "baseHref": "/portfolio/"
+            "baseHref": "/"
           },
           "configurations": {
             "production": {

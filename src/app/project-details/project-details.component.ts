@@ -57,7 +57,7 @@ export class ProjectDetailsComponent implements OnInit {
   }
 
   loadProjectData(): void {
-    this.http.get<{ projects: Project[] }>('/assets/projects-data.json').subscribe(data => {
+    this.http.get<{ projects: Project[] }>('assets/projects-data.json').subscribe(data => {
       this.project = data.projects.find(p => p.id === this.projectId) || null;
     });
   }
