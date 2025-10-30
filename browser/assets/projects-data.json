@@ -480,10 +480,9 @@
         "GitHub Pages"
       ],
       "images": [
-        "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1080&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=1080&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1080&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1080&auto=format&fit=crop"
+        "assets/budget/1.png",
+        "assets/budget/2.png",
+        "assets/budget/3.png"
       ],
       "links": {
         "demo": "https://s2c1i.github.io/budget-tracker/",
