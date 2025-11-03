@@ -174,11 +174,13 @@
 
 @media (max-width: 600px) {
   .featured-image {
-    height: 12rem;
+    height: auto;
+    min-height: 16rem;
   }
   .featured-image img {
     object-fit: contain;
     background: #fff;
+    cursor: zoom-in;
   }
 }
 
@@ -230,9 +232,11 @@
 
 @media (max-width: 600px) {
   .project-image {
-    height: 8rem;
+    height: auto;
+    min-height: 12rem;
     object-fit: contain;
     background: #fff;
+    cursor: zoom-in;
   }
 }
 
