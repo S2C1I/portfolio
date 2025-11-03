@@ -82,7 +82,8 @@
               [src]="img.startsWith('/') ? img : '/' + img"
               [alt]="(fr ? project.title.fr : project.title.en) + ' screenshot ' + (i + 1)"
               class="slideshow-image"
-              [class.active]="i === currentSlideIndex">
+              [class.active]="i === currentSlideIndex"
+              (click)="toggleImageExpand()">
 
             <!-- Navigation Buttons -->
             <button class="nav-button prev" (click)="changeSlide(-1)">
@@ -144,6 +145,48 @@
       <button class="footer-button">{{ fr ? project.footer.buttonText.fr : project.footer.buttonText.en }}</button>
     </div>
   </footer>
+
+  <!-- Expanded Image Modal -->
+  <div class="image-modal" *ngIf="isImageExpanded && project" (click)="closeExpandedImage()">
+    <div class="modal-content">
+      <button class="modal-close" (click)="closeExpandedImage()">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      
+      <img *ngFor="let img of project.images; let i = index"
+           [src]="img.startsWith('/') ? img : '/' + img"
+           [alt]="(fr ? project.title.fr : project.title.en) + ' screenshot ' + (i + 1)"
+           class="modal-image"
+           [class.active]="i === currentSlideIndex"
+           (click)="$event.stopPropagation()">
+
+      <!-- Navigation in modal -->
+      <button class="modal-nav prev" (click)="changeSlide(-1); $event.stopPropagation()">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+      <button class="modal-nav next" (click)="changeSlide(1); $event.stopPropagation()">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+
+      <!-- Indicators in modal -->
+      <div class="modal-indicators">
+        <button *ngFor="let img of project.images; let i = index" 
+                class="modal-indicator" 
+                [class.active]="i === currentSlideIndex"
+                (click)="goToSlide(i); $event.stopPropagation()"></button>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>

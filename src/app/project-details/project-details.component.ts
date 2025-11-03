@@ -39,6 +39,7 @@ export class ProjectDetailsComponent implements OnInit {
   project: Project | null = null;
   projectId: string = '';
   currentSlideIndex: number = 0;
+  isImageExpanded: boolean = false;
 
   constructor(
     private ls: LanguageService,
@@ -80,5 +81,13 @@ export class ProjectDetailsComponent implements OnInit {
 
   goToSlide(index: number): void {
     this.currentSlideIndex = index;
+  }
+
+  toggleImageExpand(): void {
+    this.isImageExpanded = !this.isImageExpanded;
+  }
+
+  closeExpandedImage(): void {
+    this.isImageExpanded = false;
   }
 }
