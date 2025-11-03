@@ -2,11 +2,12 @@
   "name": "portfolio",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+  "ng": "ng",
+  "start": "ng serve",
+  "build": "ng build",
+  "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "deploy": "ng build --configuration=production --base-href=/ && npx angular-cli-ghpages --dir=dist/browser --no-silent"
   },
   "private": true,
   "dependencies": {
