@@ -110,13 +110,13 @@
         "GitHub Pages"
       ],
       "images": [
+        "assets/gestion-etudiants/7.png",
         "assets/gestion-etudiants/1.png",
         "assets/gestion-etudiants/2.png",
         "assets/gestion-etudiants/3.png",
         "assets/gestion-etudiants/4.png",
         "assets/gestion-etudiants/5.png",
-        "assets/gestion-etudiants/6.png",
-        "assets/gestion-etudiants/7.png"
+        "assets/gestion-etudiants/6.png"
       ],
       "links": {
         "demo": "https://s2c1i.github.io/Gestion-Etudiants-en-Temps-Reel/"
