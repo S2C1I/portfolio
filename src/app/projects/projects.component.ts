@@ -35,6 +35,10 @@ interface Project {
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent implements OnInit {
+  onImageLoad(event: Event) {
+    const img = event.target as HTMLImageElement;
+    img.classList.add('loaded');
+  }
   fr: boolean = false;
   featuredProject: Project | null = null;
   otherProjects: Project[] = [];

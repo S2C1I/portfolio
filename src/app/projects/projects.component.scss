@@ -1,3 +1,11 @@
+/* Fade-in effect for images */
+.fade-image {
+  opacity: 0;
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.fade-image.loaded {
+  opacity: 1;
+}
 .projects-section {
   padding: 5rem 1.5rem;
   background-color: #e5e5e5;
@@ -157,10 +165,21 @@
   }
 }
 
+
 .featured-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .featured-image {
+    height: 12rem;
+  }
+  .featured-image img {
+    object-fit: contain;
+    background: #fff;
+  }
 }
 
 /* Projects Grid */
@@ -201,11 +220,20 @@
   overflow: hidden;
 }
 
+
 .project-image {
   width: 100%;
   height: 12rem;
   object-fit: cover;
   transition: transform 0.5s ease;
+}
+
+@media (max-width: 600px) {
+  .project-image {
+    height: 8rem;
+    object-fit: contain;
+    background: #fff;
+  }
 }
 
 .project-card:hover .project-image {

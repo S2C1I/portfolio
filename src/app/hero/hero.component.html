@@ -77,7 +77,9 @@
                 </div>
             </div>
 
-            <button class="hero-btn">Explorer mes projets</button>
+            <a class="hero-btn" [href]="fr ? '/assets/cv/Med_Amine_TOUHAMI_CV.pdf' : '/assets/cv/Med_Amine_TOUHAMI_CV_Eng.pdf'" download>
+                Télécharger mon CV
+            </a>
         </div>
 
         <div *ngIf="fr" class="contact-card">
@@ -94,7 +96,7 @@
                     </div>
                     <div class="contact-details">
                         <h4>Email</h4>
-                        <p>{{mail}}</p>
+                        <a href="mailto:{{mail}}">{{mail}}</a>
                     </div>
                 </div>
 
@@ -197,6 +199,9 @@
             </div>
 
             <button class="hero-btn">View Projects</button>
+            <a class="hero-btn" [href]="fr ? '/assets/cv/Med_Amine_TOUHAMI_CV.pdf' : '/assets/cv/Med_Amine_TOUHAMI_CV_Eng.pdf'" download>
+                Download my CV
+            </a>
         </div>
 
         <div *ngIf="!fr" class="contact-card">
