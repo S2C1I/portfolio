@@ -511,7 +511,7 @@
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
-  background: rgba(255, 255, 255, 0.2);
+  background: #14213d;
   border: none;
   border-radius: 50%;
   width: 48px;
@@ -522,15 +522,20 @@
   cursor: pointer;
   z-index: 10001;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .modal-close:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: #fca311;
   transform: scale(1.1);
 }
 
 .modal-close svg {
   color: #fff;
+}
+
+.modal-close:hover svg {
+  color: #14213d;
 }
 
 .modal-image {
@@ -552,7 +557,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.2);
+  background: #14213d;
   border: none;
   border-radius: 50%;
   width: 56px;
@@ -563,15 +568,20 @@
   cursor: pointer;
   z-index: 10001;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .modal-nav:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: #fca311;
   transform: translateY(-50%) scale(1.1);
 }
 
 .modal-nav svg {
   color: #fff;
+}
+
+.modal-nav:hover svg {
+  color: #14213d;
 }
 
 .modal-nav.prev {
